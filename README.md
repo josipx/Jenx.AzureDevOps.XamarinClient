@@ -3,7 +3,7 @@
 ![app image](docs/readme-artifacts/projectsView.png "Projects")
 
 ## The purpose of this repository.
-* Just playing with .NET Xamarin Forms. 
+* Just playing with Xamarin Forms. 
 	* Playing aroud with Visual (Material design for Xamarin Forms).	 
 	
 * Playing around with just released Visual Studio 2019.
