@@ -1,0 +1,68 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jenx.AzureDevOps.MobileClient.Views.ProjectsPage"
+             IsBusy="{Binding IsBusy}"
+             x:Name="ProjectsPageRef"
+             Title="{Binding Title}">
+    <StackLayout Orientation="Vertical" 
+                 Padding="10">
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Organization:" 
+                              FontSize="Medium"/>
+                        <Span Text=" " />
+                        <Span Text="{Binding Organization}"
+                              FontAttributes="Bold"
+                              FontSize="Medium" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <ListView RowHeight="70"
+                  ItemsSource="{Binding Projects}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding Name}"
+                                   Grid.Row="0"
+                                   FontSize="Default"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="StartAndExpand" />
+                            <StackLayout Margin="2,0,0,0" 
+                                         Grid.Row="1"
+                                         HorizontalOptions="End"
+                                         Orientation="Horizontal">
+                                <ImageButton Source="repo.png" 
+                                             Padding="2"
+                                             BackgroundColor="Transparent"
+                                             Command="{Binding BindingContext.ShowRepositoriesCommand, Source={x:Reference Name=ProjectsPageRef}}"
+                                             CommandParameter="{Binding Name}"
+                                             HorizontalOptions="End" />
+                                <ImageButton BackgroundColor="Transparent"
+                                             Padding="2"
+                                             Source="build.png"
+                                             Command="{Binding BindingContext.ShowBuildsCommand, Source={x:Reference Name=ProjectsPageRef}}"
+                                             CommandParameter="{Binding Name}"
+                                             HorizontalOptions="End" />
+                                <ImageButton BackgroundColor="Transparent"
+                                             Padding="2"
+                                             Source="build_definitions.png"
+                                             Command="{Binding BindingContext.ShowBuildDefinitionsCommand, Source={x:Reference Name=ProjectsPageRef}}"
+                                             CommandParameter="{Binding Name}"
+                                             HorizontalOptions="End" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
+    

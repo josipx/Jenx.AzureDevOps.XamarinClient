@@ -1,0 +1,62 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jenx.AzureDevOps.MobileClient.Views.AboutPage"
+             IsBusy="{Binding IsBusy}"
+             Visual="Material"
+             Title="{Binding Title}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout VerticalOptions="FillAndExpand" 
+                     Margin="15"
+                     BackgroundColor="{StaticResource QuinaryColor}"
+                     HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" 
+                             VerticalOptions="FillAndExpand">
+                    <Image Source="jenx_logo.png"
+                           VerticalOptions="Center"
+                           HeightRequest="64" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" 
+                         Padding="16,40,16,40"
+                         Spacing="10">
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Jenx Azure DevOps Client"
+                                      FontAttributes="Bold" FontSize="22" />
+                                <Span Text=" " />
+                                <Span Text="1.0" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Simple Xamarin Forms app to handle" />
+                                <Span Text=" " />
+                                <Span Text="Azure DevOps" FontAttributes="Bold" />
+                                <Span Text=" " />
+                                <Span Text="actions." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Margin="10" 
+                        Text="Jenx.si"
+                        Command="{Binding OpenJenxSiWebCommand}" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

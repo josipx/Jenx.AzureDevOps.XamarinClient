@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="si.jenx.azuredevops.mobile" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="28" />
+	<application android:label="Jenx AzureDevOps Mobile"></application>
+</manifest>

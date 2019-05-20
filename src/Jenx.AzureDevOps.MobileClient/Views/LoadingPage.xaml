@@ -1,0 +1,25 @@
+﻿<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 CloseWhenBackgroundIsClicked="false"
+                 x:Class="Jenx.AzureDevOps.MobileClient.Views.LoadingPage">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="0.8"
+                                   DurationIn="400"
+                                   DurationOut="300"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"
+                                   HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <StackLayout VerticalOptions="Center" 
+                 HorizontalOptions="Center" 
+                 Padding="0">
+        <ActivityIndicator IsVisible="true"
+                           IsRunning="true"
+                           Color="{StaticResource QuaternaryColor}" />
+    </StackLayout>
+</pages:PopupPage>

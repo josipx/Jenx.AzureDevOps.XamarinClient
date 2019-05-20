@@ -1,0 +1,46 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jenx.AzureDevOps.MobileClient.Views.BuildsPage"
+             IsBusy="{Binding IsBusy}"
+             Title="{Binding Title}">
+    <StackLayout Orientation="Vertical"
+                 Padding="10">
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Project:"
+                              FontSize="Medium"/>
+                        <Span Text=" " />
+                        <Span Text="{Binding ProjectName}" 
+                              FontAttributes="Bold"
+                              FontSize="Medium" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <ListView ItemsSource="{Binding Builds}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="5,0,0,0"
+                                     Orientation="Horizontal"
+                                     HorizontalOptions="FillAndExpand">
+                            <Label Text="{Binding BuildNumber}"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="StartAndExpand" />
+                            <Label Text="{Binding Result}"
+                                   HorizontalTextAlignment="End"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="StartAndExpand" />
+                            <Label Text="{Binding Status}"
+                                   HorizontalTextAlignment="End"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="StartAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
