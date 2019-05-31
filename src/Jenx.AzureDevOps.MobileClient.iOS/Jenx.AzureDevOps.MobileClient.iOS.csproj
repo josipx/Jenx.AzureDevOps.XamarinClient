@@ -124,6 +124,15 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\repo.png" />
+    <BundleResource Include="Resources\projects.png" />
+    <BundleResource Include="Resources\jenx_logo.png" />
+    <BundleResource Include="Resources\home.png" />
+    <BundleResource Include="Resources\build.png" />
+    <BundleResource Include="Resources\build_definitions.png" />
+    <BundleResource Include="Resources\about.png" />
+    <BundleResource Include="Resources\settings.png" />
+    <BundleResource Include="Resources\hamburger.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -149,7 +158,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Jenx.AzureDevOps.MobileClient\Jenx.AzureDevOps.MobileClient.csproj">
-      <Project>{0494D1B5-7F0B-4299-B5D2-BC5E7F3D57B5}</Project>
+      <Project>{945A164E-5351-4B55-9832-F751F5CB3277}</Project>
       <Name>Jenx.AzureDevOps.MobileClient</Name>
     </ProjectReference>
   </ItemGroup>

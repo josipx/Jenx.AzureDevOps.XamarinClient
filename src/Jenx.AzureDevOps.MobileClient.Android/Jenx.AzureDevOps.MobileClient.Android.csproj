@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
@@ -104,7 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Jenx.AzureDevOps.MobileClient\Jenx.AzureDevOps.MobileClient.csproj">
-      <Project>{0494D1B5-7F0B-4299-B5D2-BC5E7F3D57B5}</Project>
+      <Project>{945A164E-5351-4B55-9832-F751F5CB3277}</Project>
       <Name>Jenx.AzureDevOps.MobileClient</Name>
     </ProjectReference>
   </ItemGroup>

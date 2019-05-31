@@ -9,7 +9,7 @@ namespace Jenx.AzureDevOps.MobileClient.Views
         public MainPage()
         {
             InitializeComponent();
-            Master.Icon = "icon.png";
+            Master.Icon = "hamburger.png";
         }
     }
 }
